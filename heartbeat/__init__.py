@@ -13,6 +13,10 @@ class Environment(enum.Enum):
     DEVELOPMENT = enum.auto()
     PRODUCTION = enum.auto()
 
+    @staticmethod
+    def from_string(env: str) -> 'Environment':
+        return getattr(Environment, env)
+
 
 CONFIGMAP = {
     Environment.TESTING: 'heartbeat.config.TestingConfig',
