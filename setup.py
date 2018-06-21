@@ -23,6 +23,7 @@ setuptools.setup(
         'Flask-SocketIO==3.0.1',
         'greenlet==0.4.13',
         'gunicorn==19.8.1',
+        'redis==2.10.6',
     ],
     extras_require={
         'development': [
