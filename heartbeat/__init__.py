@@ -2,6 +2,7 @@
 import enum
 import flask
 from heartbeat import views
+from heartbeat.counts import counter
 from heartbeat.sockets import socketio
 
 __version__ = "0.1.0"
@@ -34,6 +35,7 @@ def create_app(environment: Environment):
     app.config.from_object(CONFIGMAP[environment])
     app.config.from_pyfile("application.cfg", silent=True)
 
+    counter.init_app(app)
     socketio.init_app(app)
     app.register_blueprint(views.routes, url_prefix=r"/")
 
