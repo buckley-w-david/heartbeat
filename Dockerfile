@@ -1,8 +1,8 @@
 FROM python:3-slim AS build-env
 WORKDIR /app
 COPY heartbeat heartbeat
-COPY setup.py setup.py
-RUN ["pip", "install", "."]
+COPY requirements.txt requirements.txt
+RUN ["pip", "install", "-r", "requirements.txt"]
 
 ##################################################
 

@@ -1,4 +1,4 @@
-class HeartbeatConfig():
+class HeartbeatConfig:
     DEBUG = False
     TESTING = False
 

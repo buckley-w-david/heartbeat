@@ -30,6 +30,7 @@ setuptools.setup(
             'pylint==1.9.2',
             'pytest==3.6.2',
             'pytest-cov==2.5.1',
+            'black==18.6b3',
         ],
     },
 )
