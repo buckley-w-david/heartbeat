@@ -1,4 +1,4 @@
-FROM python:3.6.5-alpine AS build-env
+FROM python:3-slim AS build-env
 WORKDIR /app
 COPY heartbeat heartbeat
 COPY requirements.txt requirements.txt
